@@ -1,0 +1,5 @@
+LOG:  database system was shut down at 2014-08-08 15:28:38 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "safety_app_development" does not exist
+FATAL:  database "safety_app_development" does not exist
