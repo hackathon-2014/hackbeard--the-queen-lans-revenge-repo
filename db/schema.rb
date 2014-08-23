@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823163724) do
+ActiveRecord::Schema.define(version: 20140823165837) do
 
   create_table "attempts", force: true do |t|
     t.integer "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140823163724) do
     t.boolean "correct"
     t.string  "location"
     t.string  "weather"
+    t.integer "correct_answer", default: 0
   end
 
   create_table "tracks", force: true do |t|
