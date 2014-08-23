@@ -18,8 +18,7 @@ events = Event.create([
 
   {question: 'You and yer crew are drinkin\' an\' carryin\' on at the tavern when three Naval officers walk in. What do you do?', answers: 'Shoot first, ask questions later|carry on as though nothing is the matter|buy the fine gentlemen a round|Run', correct: 'false', location: 'somewhere', weather: 'sunny', track_id: 1, correct_answer: 1},
   {question: 'Four bounty hunters grab yer crew mate on the dock right in front of you. You:', answers: 'Demand a reward|Fight them! There\'s only four of them after all|Offer them a bribe|Run', correct: 'false', location: 'somewhere', weather: 'sunny', track_id: 1, correct_answer: 1},
-  {question: 'While digging up yer barried treasure, a band of natives descends upon you. You:', answers: 'Fight to the death! No one takes your treasure!|Offer them your gold if they spare your life|Tell them you are a god, and demand that they take you to their village and become your slaves|Run back the ship, gather the crew and plunder their village!', correct: 'false', location: 'somewhere', weather: 'sunny', track_id: 1, correct_answer: 1},
-  {question: 'The captain has clearly had to much to drink. He gets behind the helm and yells "Anchors away! We\'re setting sail!" You:', answers: '', correct: 'false', location: 'somewhere', weather: 'sunny', track_id: 1, correct_answer: 1}])
+  {question: 'While digging up yer barried treasure, a band of natives descends upon you. You:', answers: 'Fight to the death! No one takes your treasure!|Offer them your gold if they spare your life|Tell them you are a god, and demand that they take you to their village and become your slaves|Run back the ship, gather the crew and plunder their village!', correct: 'false', location: 'somewhere', weather: 'sunny', track_id: 1, correct_answer: 1}])
 
 
 tracks = Track.create([

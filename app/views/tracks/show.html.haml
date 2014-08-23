@@ -2,14 +2,21 @@
 
 this is where the description will go
 
-- @track.events.each do |e| 
-	%h4=e.question
-	%br
-	-@count = 1
-	-e.answer_split.each do |a|
-
-		= "#{@count}: #{a}"
-		-@count += 1
+= form_for @attempt do |f|
+	- if @attempt.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@attempt.errors.count, "error")} prohibited this attempt from being saved:"
+			%ul
+				- @attempt.errors.full_messages.each do |msg|
+					%li= msg
+	-@track.events.each do |e| 
+		%h4=e.question
 		%br
-
-
+		-@count = 1
+		%select
+			-e.answer_split.each do |a|
+				="#{@count} #{a}"
+				%option{:id => @count, :value => @count, :label => "#{a}"}
+				-@count += 1
+	%br
+	= f.submit 'Save'
