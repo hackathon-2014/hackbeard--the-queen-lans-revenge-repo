@@ -23,7 +23,7 @@ events = Event.create([
 
 
 tracks = Track.create([
-  {name: 'AtSea'},
-  {name: 'AtPort'},
-  {name: 'LandLubbing'}
+  {name: 'At Sea'},
+  {name: 'At Port'},
+  {name: 'Land Lubbing'}
   ])
