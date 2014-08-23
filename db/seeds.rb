@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+events = Event.create([
+  {question: 'What kind of question?', answers: '|option 1|option 2|option 3|', correct: 'false', location: 'somewhere', weather: 'sunny'},
+  {question: 'What kind of question?', answers: '|option 1|option 2|option 3|', correct: 'false', location: 'somewhere', weather: 'sunny'},
+  {question: 'What kind of question?', answers: '|option 1|option 2|option 3|', correct: 'false', location: 'somewhere', weather: 'sunny'}])
+
+
+tracks = Track.create([
+  {name: 'AtSea'},
+  {name: 'AtPort'},
+  {name: 'LandLubbing'}
+  ])
