@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.1.4'
-gem 'pg', group: :production
+# gem 'pg', group: :production
 gem 'mysql2', group: :development
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
