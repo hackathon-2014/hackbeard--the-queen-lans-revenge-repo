@@ -1,22 +1,32 @@
-%h1= @track.name
+/ %h1= @track.name
 
-this is where the description will go
+/ this is where the description will go
 
-= form_for @attempt do |f|
-	- if @attempt.errors.any?
-		#error_explanation
-			%h2= "#{pluralize(@attempt.errors.count, "error")} prohibited this attempt from being saved:"
-			%ul
-				- @attempt.errors.full_messages.each do |msg|
-					%li= msg
-	-@track.events.each do |e| 
+/ = form_for @attempt do |f|
+/ 	- if @attempt.errors.any?
+/ 		#error_explanation
+/ 			%h2= "#{pluralize(@attempt.errors.count, "error")} prohibited this attempt from being saved:"
+/ 			%ul
+/ 				- @attempt.errors.full_messages.each do |msg|
+/ 					%li= msg
+/ 	-@track.events.each do |e| 
+/ 		%h4=e.question
+/ 		%br
+/ 		-@count = 1
+/ 		%select
+/ 			-e.answer_split.each do |a|
+/ 				="#{@count} #{a}"
+/ 				%option{:id => @count, :value => @count, :label => "#{a}"}
+/ 				-@count += 1
+/ 	%br
+/ 	= f.submit 'Save'
+
+
+= form_tag score_questions_attempt_path do
+	=hidden_field_tag :user_id, current_user.id
+	=hidden_field_tag :track_id, @track.id
+	-@track.events.each do |e|
 		%h4=e.question
-		%br
-		-@count = 1
-		%select
-			-e.answer_split.each do |a|
-				="#{@count} #{a}"
-				%option{:id => @count, :value => @count, :label => "#{a}"}
-				-@count += 1
-	%br
-	= f.submit 'Save'
+		=select_tag "question_#{e.id}", options_for_select([[e.answer_split[0], 0],[e.answer_split[1], 1],[e.answer_split[2],2], [e.answer_split[3],3]])
+
+	=submit_tag "tag"

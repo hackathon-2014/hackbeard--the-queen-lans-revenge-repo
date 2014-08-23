@@ -8,6 +8,10 @@ class AttemptsController < ApplicationController
     end
   end
 
+  def score_questions
+    params[:score]
+  end
+
 private
   def attempt_params
     params.require(:attempt).permit(:user_id, :track_id, :completed, :score)

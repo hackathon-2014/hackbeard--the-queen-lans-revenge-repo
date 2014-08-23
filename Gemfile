@@ -16,3 +16,4 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'pry-rails'
 gem 'devise'
+gem 'rabl'

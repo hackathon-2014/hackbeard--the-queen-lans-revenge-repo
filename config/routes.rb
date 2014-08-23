@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     root to: "tracks#index"
    resources :tracks
    resources :events
-   resources :attempts
+   resources :attempts do 
+   	member do
+   		post :score_questions
+   	end
+   end
   end
 end
