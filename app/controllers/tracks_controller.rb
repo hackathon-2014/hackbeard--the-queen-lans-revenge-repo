@@ -4,7 +4,8 @@ class TracksController < ApplicationController
 		@tracks = Track.all
 	end
 
-	def show 
+	def show
+    @attempt = Attempt.new
 		@track = Track.find(params[:id])
 		
 	end
