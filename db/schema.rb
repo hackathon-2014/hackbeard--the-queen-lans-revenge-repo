@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823144752) do
+ActiveRecord::Schema.define(version: 20140823161025) do
+
+  create_table "attempts", force: true do |t|
+    t.integer "user_id"
+    t.integer "track_id"
+    t.boolean "completed"
+    t.integer "score"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "events", force: true do |t|
+    t.integer "track_id"
+    t.text    "question"
+    t.text    "answers"
+    t.boolean "correct"
+    t.string  "location"
+    t.string  "weather"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -5,4 +5,4 @@ default: &default
 
 development:
   <<: *default
-  database: hospital_development
+  database: safety_development
