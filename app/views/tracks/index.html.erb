@@ -1,0 +1,29 @@
+<% @tracks.each do |track| %>
+  <%= link_to "#{track.name}", track_path(track.id) %>
+  <br/>
+<% end %>
+  <div class="col-sm-4">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><center><%= link_to "Land Lubbing", tracks_path %></center></h3>
+      </div>
+      <div class="panel-body">
+        <center><img src="/assets/Land-lubbing.jpg" class="img-responsive" alt="Land Lubbing"></center>
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><center><%= link_to "At Sea", tracks_path %></center></h3>
+      </div>
+      <div class="panel-body">
+        <center><img src="/assets/At_Sea.jpg" class="img-responsive" alt="At Sea"></center>
+      </div>
+    </div>
+  </div><!-- /.col-sm-4 -->
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title"><center><%= link_to "At Port", tracks_path %></center></h3>
+      </div>
+      <div class="panel-body">
+        <center><img src="/assets/At_Port.jpg" class="img-responsive" alt="At Port"></center>
+      </div>
