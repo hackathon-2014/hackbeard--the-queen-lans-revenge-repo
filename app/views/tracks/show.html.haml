@@ -3,5 +3,13 @@
 this is where the description will go
 
 - @track.events.each do |e| 
-	=e.question
+	%h4=e.question
 	%br
+	-@count = 1
+	-e.answer_split.each do |a|
+
+		= "#{@count}: #{a}"
+		-@count += 1
+		%br
+
+
