@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     root to: "tracks#index"
    resources :tracks
    resources :events
+   resources :attempts
   end
 end
